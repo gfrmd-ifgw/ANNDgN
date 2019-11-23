@@ -66,7 +66,7 @@ class PlotMono:
             max=40.0,
             step=0.1,
             value=0,
-            description='CCPD',
+            description='CPCD',
             disabled=False,
             style = {'description_width': 'initial'}
         )
@@ -132,7 +132,7 @@ class PlotMono:
         file.write('#Breast Glandularity = '+str(self.gland.value)+'\n')
         file.write('#Skin Thickness (mm) = '+str(self.skin.value)+'\n')
         file.write('#Adipose Thickness (mm) = '+str(self.adipose.value)+'\n')
-        file.write('#CCPD = '+str(self.ccpd.value)+'\n')
+        file.write('#CPCD = '+str(self.ccpd.value)+'\n')
         file.write('#Energy(keV)\tDgN\tUncertainty\n')
         for i in range(len(energy)):
             #file.write(' '+str(potential[i])+'\t'+str(np.round(hvl[i],4))+'\t'+str(np.round(dgn[i],5))+'\t'+str(np.round(edgn[i],5))+'\n')
