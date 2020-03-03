@@ -68,7 +68,7 @@ def predict_mgd_kerma(potential, radius, thick, gland, skin, adipose, compress_d
     return mgd, kerma
 
 def predict_dgn_poli(anode, Filter, thick_filter, potential, radius, thick, gland, skin, adipose, compress_dist, pmma):
-    spec = calc_spec.return_df_spec(anode, Filter, potential, thick_filter, 1.5)
+    spec = calc_spec.return_df_spec(anode, Filter, potential, thick_filter, pmma)
     mgd, kerma = predict_mgd_kerma(potential, radius, thick, gland, skin, adipose, compress_dist)    
     
     mgd = mgd*spec[1].values
